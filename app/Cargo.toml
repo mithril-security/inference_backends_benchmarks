@@ -1,0 +1,14 @@
+[package]
+name = "app"
+version = "1.0.0"
+build = "build.rs"
+edition = "2018"
+
+[dependencies]
+anyhow = "=1.0.45"
+benches = { path = "../benches" }
+sgx_types = { git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+sgx_urts = { git = "https://github.com/apache/teaclave-sgx-sdk.git" }
+raw-cpuid = "10.3.0"
+chrono = "0.4"
+whoami = "1.2.1"

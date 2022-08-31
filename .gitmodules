@@ -1,0 +1,4 @@
+[submodule "sgx-sdk"]
+	path = sgx-sdk
+	url = https://github.com/mithril-security/teaclave-sgx-sdk
+	branch = v1.1.3-93-g7dfc0598

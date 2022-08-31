@@ -1,0 +1,15 @@
+[package]
+name = "benches"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+anyhow = "=1.0.45"
+csv = "1.1"
+ndarray-npy = "0.8.0"
+env_logger = {version = "0.9", default-features = false}
+sha256 = "1.0.3"
+
+[dependencies.tract-onnx]
+version = "0.17.2-pre"
+features=["untrusted_fs"]

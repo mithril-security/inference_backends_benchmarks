@@ -1,0 +1,40 @@
+old
+tmp
+models/*.npz
+models/*.onnx
+models/gpt-neo-2.7b
+all_outputs.txt
+logs.txt
+bench.csv
+
+app/Enclave_u.c
+app/Enclave_u.h
+enclave/Enclave_t.c
+enclave/Enclave_t.h
+
+obj/
+lib/
+bin/
+target/
+client/
+
+# Client policy is generated from the enclave signed executable by the Makefile
+policy.toml
+host_server.pem
+host_server.key
+
+# Compilation artifacts
+enclave/target
+enclave/vendor
+app/target
+enclave/enclave.meta.txt
+
+enclave/Enclave_private.pem
+enclave/Enclave_public.pem
+enclave/enclave.metadata.txt
+
+## Python 
+# Byte-compiled / optimized / DLL files 
+__pycache__/
+*.py[cod]
+*$py.class

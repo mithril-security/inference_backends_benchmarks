@@ -1,0 +1,25 @@
+
+[workspace]
+resolver = "2"
+members = [
+  "enclave",
+  "app",
+  "benches"
+]
+
+[profile.release]
+lto = false # setting to true will increase linking time a LOT
+incremental = true # since sgx make everything relink, it helps increase recompilation time
+
+[patch.crates-io]
+anyhow = {git = 'https://github.com/mithril-security/anyhow-xargo-sgx.git', tag = "1.0.45-sgx"}
+env_logger = {git = "https://github.com/mithril-security/env_logger-sgx.git", tag = "v0.9.0-sgx"}
+serde = {git = 'https://github.com/mithril-security/serde-xargo-sgx.git', tag = "v1.0.130-sgx"}
+serde_derive = {git = 'https://github.com/mithril-security/serde-xargo-sgx.git', tag = "v1.0.130-sgx"}
+tar = {git = "https://github.com/mithril-security/tar-rs-sgx-xargo.git", tag = "0.4.38"}
+tract-onnx = {git = "https://github.com/mithril-security/tract-sgx-xargo.git", branch = "master-0.17.2-pre"}
+
+[patch.'https://github.com/apache/teaclave-sgx-sdk.git']
+sgx_alloc = {path = "./sgx-sdk/sgx_alloc"}
+sgx_types = {path = "./sgx-sdk/sgx_types"}
+sgx_urts = {path = "./sgx-sdk/sgx_urts"}

@@ -1,0 +1,14 @@
+scikit-build
+torch
+opencv-python
+pillow
+pandas
+torchvision
+seaborn
+onnx-simplifier
+librosa
+transformers
+facenet_pytorch
+onnx
+onnxruntime
+onnxsim
